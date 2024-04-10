@@ -1,0 +1,2 @@
+# Mancala
+AI Class Project 
