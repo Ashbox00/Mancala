@@ -1,3 +1,9 @@
+from player import Player
+
+#bring in the player class and initialize them
+Player1 = Player()
+Player2 = Player()
+
 #initialze the board at start of game
 board = [[5,0,0,0,0,0],
          [0,0,0,0,0,0]]
@@ -16,12 +22,7 @@ def move_piece(y,x):
             
         # alternative side of board version
     
-
-
-
-
-
-
+# not working its going out of range (did -1 on ranges still not working as intended)
 def check_board_empty():
     Empty:bool = False
     for i in range(len(board[0])):
@@ -37,14 +38,13 @@ def check_board_empty():
     else:
         print("Not empty")
 
-
+#works fine 
 def draw_board():
-    print(f'|{board[0][0]}|{board[0][1]}|{board[0][2]}|{board[0][3]}|{board[0][4]}|{board[0][5]}|')
-    print(f'|{board[1][0]}|{board[1][1]}|{board[1][2]}|{board[1][3]}|{board[1][4]}|{board[1][5]}|')
+    print(f'Player 1 |{board[0][0]}|{board[0][1]}|{board[0][2]}|{board[0][3]}|{board[0][4]}|{board[0][5]}|  Player 2')
+    print(f'   {Player1.pool}     |{board[1][0]}|{board[1][1]}|{board[1][2]}|{board[1][3]}|{board[1][4]}|{board[1][5]}|      {Player2.pool}')
 
 
 
 draw_board()
-move_piece(0,0)
-draw_board()
+
 #check_board_empty()
